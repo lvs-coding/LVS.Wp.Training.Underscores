@@ -102,13 +102,16 @@ add_action( 'widgets_init', 'lvsscores_widgets_init' );
  * Enqueue scripts and styles.
  */
 function lvsscores_scripts() {
-	wp_enqueue_style( 'lvsscores-style', get_stylesheet_uri() );
-        
-        // Add Google Fonts : Fira sans and Merriweather
-        //wp_enqueue_style('lvsscores-google-fonts','https://fonts.googleapis.com/css?family=Fira+Sans:400,400italic,700,700italic|Merriweather:400,400italic,700,700italic');
-        
-        // Add Local Fonts : Fira sans and Merriweather
-        wp_enqueue_style('lvsscores-local-fonts', get_template_directory_uri() . '/fonts/custom-fonts.css');
+	wp_enqueue_style('lvsscores-style', get_stylesheet_uri());
+
+	// Add Google Fonts : Fira sans and Merriweather
+	//wp_enqueue_style('lvsscores-google-fonts','https://fonts.googleapis.com/css?family=Fira+Sans:400,400italic,700,700italic|Merriweather:400,400italic,700,700italic');
+
+	// Add Local Fonts : Fira sans and Merriweather
+	wp_enqueue_style('lvsscores-local-fonts', get_template_directory_uri() . '/fonts/custom-fonts.css');
+
+	// Add Font Awesome icons (http://fontawesome.io"
+	wp_enqueue_style('lvsscores-fontawesome', 'https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css');
         
 
 	wp_enqueue_script( 'lvsscores-navigation', get_template_directory_uri() . '/js/navigation.js', array('jquery'), '20151215', true );
