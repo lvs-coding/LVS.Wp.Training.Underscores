@@ -5,6 +5,7 @@
  * support for dropdown menus.
  */
 ( function( $ ) {
+	// NAVIGATION start
 	var container, button, menu, links, subMenus;
 
 	container = document.getElementById( 'site-navigation' );
@@ -133,5 +134,8 @@
 		}
 		position = $(this).scrollTop();
 	});
+
+	// Wrap centered images in a new figure element
+	$('img.aligncenter').wrap('<figure class="centered-image"></figure>');
 
 } )( jQuery );
